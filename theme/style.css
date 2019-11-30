@@ -1,0 +1,31 @@
+/*
+Theme Name: Custom
+## Theme URI: https://wordpress.org/
+Author: tobidot
+Author URI: http://tobias.gepp-im-web.de/
+Description: Having the look as browsing with an old PC on an old Monitor
+Version: 0.1
+License: MIT
+License URI: /License.txt
+Text Domain: oldpc
+Tags: simple-paged, old-pc, nostalgic
+
+*/
+
+div {
+    background: black;
+    color: wheat;
+}
+
+.monitor {
+    width: 80vw;
+    height: 80vh;
+    margin: 2em;
+
+    filter: blur(1.3px);
+    background: #000a00;
+
+    color: darkgreen;
+    font-size: 42px;
+    font-weight: bold;
+}
