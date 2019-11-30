@@ -19,5 +19,5 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: theme 
         REMOTE_DIR: wp-content\themes\custom
-        ARGS: --delete --dry-run
+        ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
