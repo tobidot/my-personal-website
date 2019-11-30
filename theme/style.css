@@ -1,5 +1,5 @@
 /*
-Theme Name: Custom
+Theme Name: Old-PC
 ## Theme URI: https://wordpress.org/
 Author: tobidot
 Author URI: http://tobias.gepp-im-web.de/
@@ -11,6 +11,10 @@ Text Domain: oldpc
 Tags: simple-paged, old-pc, nostalgic
 
 */
+
+* {
+    outline: 1px solid darkblue;
+}
 
 div {
     background: black;
