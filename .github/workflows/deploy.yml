@@ -18,6 +18,6 @@ jobs:
         FTP_USERNAME: ftp_wp-t@gepp-im-web.de
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: theme 
-        REMOTE_DIR: wp-content\themes\custom
+        REMOTE_DIR: wp-content
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
