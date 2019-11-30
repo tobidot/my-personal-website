@@ -17,7 +17,7 @@ jobs:
         FTP_SERVER: ftp.strato.com
         FTP_USERNAME: ftp_wp-t@gepp-im-web.de
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: 'wp-content' 
-        REMOTE_DIR: 'wp-content'
+        LOCAL_DIR: wp-content 
+        REMOTE_DIR: wp-content
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
