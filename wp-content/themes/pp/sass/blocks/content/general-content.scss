@@ -1,0 +1,25 @@
+.site-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 20px;
+    background: $primary-bg-color;
+    color: $primary-fg-color;
+    .home {
+        display: block;
+        padding: 20px 200px 20px 200px;
+        section {
+            p {
+                margin-left : 20px;
+                font-size: 0.9em;
+                &:nth-child(2n) {
+                    background-color: lighten($color: $primary-bg-color, $amount: 30);
+                }
+            }
+        }
+    }
+    &:before, &:after {
+        content: none;
+    }
+}
+

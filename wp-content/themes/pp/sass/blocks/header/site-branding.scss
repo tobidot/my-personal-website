@@ -1,0 +1,15 @@
+/**
+ * #######################################################
+ *                  Site-Branding
+ * #######################################################
+ **/
+
+ .site-branding {
+    text-align: center;
+    background: darken($primary-bg-color, 10%);
+
+    .site-description {
+        background: $info-bg-color;
+        color: $info-fg-color;
+    }
+ }
