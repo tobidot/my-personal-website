@@ -11,25 +11,125 @@ Text Domain: oldpc
 Tags: simple-paged, old-pc, nostalgic
 
 */
-
-* {
-    outline: 1px solid darkblue;
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Courier New", Courier, monospace;
 }
 
-div {
-    background: black;
-    color: wheat;
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body #page {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  grid-template-areas: "menu monitor" "menu footer";
+  grid-template-rows: 90% 10%;
+  grid-template-columns: 200px 1fr;
 }
 
 .monitor {
-    width: 80vw;
-    height: 80vh;
-    margin: 2em;
-
-    filter: blur(1.3px);
-    background: #000a00;
-
-    color: darkgreen;
-    font-size: 42px;
-    font-weight: bold;
+  grid-area: monitor;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+  border: solid darkblue 2px;
+  box-sizing: border-box;
+  filter: blur(1.3px);
+  background: #000a00;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: darkgreen;
+  font-size: 42px;
+  font-weight: bold;
+  flex-flow: column;
 }
+
+.site-footer {
+  grid-area: footer;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background: beige;
+  font-size: 16px;
+  color: darkslategray;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px 1fr;
+}
+.site-footer .site-footer__site-info {
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.site-footer .site-footer__sticker {
+  display: flex;
+  min-width: 80px;
+  height: 20px;
+  padding: 0 5px;
+  margin: 0 5px;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.site-footer .site-footer__sticker--blue {
+  border-color: #00BCD4;
+  color: brown;
+}
+
+.site-menu {
+  grid-area: menu;
+  display: flex;
+  flex-flow: column;
+  background: beige;
+  justify-content: space-evenly;
+}
+.site-menu__entry {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.site-menu .old-button {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.site-menu .old-button__button {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border: 3px solid gray;
+  box-shadow: 3px 3px slategray;
+}
+.site-menu .old-button__button:active {
+  box-shadow: inset 3px 3px slategray;
+  background: rgba(0, 0, 0, 0.1);
+}
+.site-menu .old-button__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
