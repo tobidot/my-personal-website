@@ -5,11 +5,7 @@
 get_header();
 ?>
 
-<div>
-    <div class="monitor">
-        Welcome to the Internet
-    </div>
-</div>
+Default Page
 
 <?php
 get_footer();

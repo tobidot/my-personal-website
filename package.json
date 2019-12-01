@@ -1,0 +1,25 @@
+{
+  "name": "tobias_gepp_im_web_de",
+  "version": "0.1.0",
+  "description": "Eine Wordpress Seite im stil von alten Röhren Monitoren",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass wp-content/themes/old_pc/style.scss wp-content/themes/old_pc/style.css",
+    "sass:watch": "sass wp-content/themes/old_pc/style.scss wp-content/themes/old_pc/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobidot/old_pc_wordpress_theme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "old_pc"
+  ],
+  "author": "tobidot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobidot/old_pc_wordpress_theme/issues"
+  },
+  "homepage": "https://github.com/tobidot/old_pc_wordpress_theme#readme"
+}

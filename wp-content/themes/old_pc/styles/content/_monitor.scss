@@ -1,0 +1,13 @@
+.monitor {
+    grid-area: monitor;
+    padding: 2%;
+    border: solid darkblue 2px;
+    box-sizing: border-box;
+
+    filter: blur(1.3px);
+    background: #000a00;
+
+    color: darkgreen;
+    font-size: 42px;
+    font-weight: bold;
+}
