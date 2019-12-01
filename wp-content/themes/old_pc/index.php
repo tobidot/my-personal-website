@@ -7,7 +7,7 @@ get_header();
 
 <div>
     <div class="monitor">
-        help
+        Welcome to the Internet
     </div>
 </div>
 
