@@ -19,8 +19,12 @@
         <?php get_template_part('template-parts/footer/footer', 'widgets'); ?>
     </div>
     <div class="site-footer__site-info">
-        <?php $items = wp_get_nav_menu_items('footer'); ?>
-        <?php foreach ($items as $menu_item) : /** @var WP_Post $menu_item*/ ?>
+        <?php
+        $locations = get_nav_menu_locations();
+        $menu = get_term($locations['footer'], 'nav_menu');
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+        ?>
+        <?php foreach ($menu_items as $menu_item) : /** @var WP_Post $menu_item*/ ?>
             <a href="<?= $menu_item->url ?>" class="site-footer__sticker site-footer__sticker--blue site-footer__name">
                 <?= $menu_item->title ?>
             </a>
