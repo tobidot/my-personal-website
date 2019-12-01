@@ -1,13 +1,20 @@
 .monitor {
     grid-area: monitor;
+    display: flex;
+    height: 100%;
+    width: 100%;
     padding: 2%;
     border: solid darkblue 2px;
     box-sizing: border-box;
 
     filter: blur(1.3px);
     background: #000a00;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     color: darkgreen;
     font-size: 42px;
     font-weight: bold;
+
+    flex-flow: column;
 }
