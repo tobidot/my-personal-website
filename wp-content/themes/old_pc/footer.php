@@ -11,8 +11,10 @@
  */
 
 ?>
-
 </div><!-- #content -->
+</div><!-- .monitor__activated-filter -->
+</div><!-- .monitor__light-filter -->
+</div><!-- .monitor -->
 
 <footer id="footer" class="site-footer">
     <div class="site-footer__widgets">
