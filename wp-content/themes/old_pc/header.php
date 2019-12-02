@@ -42,4 +42,7 @@
             <?php endforeach; ?>
         </header><!-- #header -->
 
-        <div id="content" class="site-content monitor">
+        <div class="monitor">
+            <div class="monitor__light-filter">
+                <div class="monitor__activated-filter">
+                    <div id="content" class="site-content">
