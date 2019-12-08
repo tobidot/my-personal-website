@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "/www/var/html"
+		},
+		{
+			"path": "/www/var/html/wp-content/themes/old_pc",
+		}
+	],
+	"settings": {}
+}

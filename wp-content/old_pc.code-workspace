@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "/var/www/html"
+		},
+		{
+			"path": "themes/old_pc"
+		}
+	],
+	"settings": {}
+}
