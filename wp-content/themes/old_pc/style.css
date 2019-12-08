@@ -145,4 +145,52 @@ body #page {
   padding: 0 5px;
 }
 
+.debug-report {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  color: white;
+  font-size: large;
+  font-family: monospace;
+  text-shadow: 2px 2px 0px black;
+  background: darkred;
+}
+.debug-report__message {
+  white-space: pre;
+}
+.debug-report__trace {
+  white-space: pre;
+}
+.debug-report h1, .debug-report h2, .debug-report h3, .debug-report h4 {
+  text-align: center;
+}
+.debug-report p {
+  padding: 1em 0;
+  border-bottom: 3px solid black;
+}
+
+.code-location {
+  margin: 0;
+}
+.code-location__part {
+  float: left;
+  clear: left;
+  display: block;
+  padding: 2px 10px;
+  border: solid 1px white;
+  line-height: 1.5em;
+  white-space: normal;
+  background: rgba(0, 0, 0, 0.8);
+}
+.code-location__part span {
+  margin: 0 1em;
+}
+.code-location:after {
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
 /*# sourceMappingURL=style.css.map */
