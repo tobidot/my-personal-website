@@ -10,11 +10,19 @@ get_header();
         wp_body_open();
 
         ob_start();
-        template('page/default');
+        template('page/bare');
         $content = ob_get_clean();
-        //echo $content;
+
+        ob_start();
         template('wrapper/old-pc', [
-            'content' => $content
+            'content' => $content,
+            'position' => [0, 0, 1000],
+        ]);
+        $old_pc = ob_get_clean();
+
+
+        template('wrapper/world', [
+            'content' => $old_pc
         ]);
 
         wp_footer();

@@ -1,4 +1,7 @@
 .monitor {
+    display: block;    
+    width: 800px;
+    height: 600px;
     background: black;
     overflow-x: hidden;
 
@@ -25,12 +28,10 @@
 
         flex-flow: column;
     }
-}
 
-#content {
-    display: flex;
-    height: 100%;
-    width: 100%;
-
-    padding: 2%;
+    &__content {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
 }

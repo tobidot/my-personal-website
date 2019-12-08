@@ -9,23 +9,4 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-
-    #page {
-        display: grid;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-
-        grid-template-areas:
-            "menu monitor"
-            "menu footer";
-        grid-template-rows: 90% 10%;
-        grid-template-columns: 200px 1fr;
-    }
 }
-
-@import "content/monitor";
-@import "footer/footer";
-@import "menues/main-menue";
-@import "debug/main";
