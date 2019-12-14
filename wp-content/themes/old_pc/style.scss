@@ -4,7 +4,7 @@ Theme Name: Old-PC
 Author: tobidot
 Author URI: http://tobias.gepp-im-web.de/
 Description: Having the look as browsing with an old PC on an old Monitor
-Version: 0.1
+Version: 0.1.1
 License: MIT
 License URI: /License.txt
 Text Domain: oldpc
@@ -13,3 +13,8 @@ Tags: simple-paged, old-pc, nostalgic
 */
 
 @import "styles/body";
+@import "styles/footer/footer";
+@import "styles/menues/main-menue";
+@import "styles/debug/main";
+@import "styles/wrapper/3d-models/world";
+@import "styles/wrapper/3d-models/old-pc/main";

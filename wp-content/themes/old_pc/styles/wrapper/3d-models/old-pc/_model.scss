@@ -1,0 +1,81 @@
+.old-pc-model {
+    width: 800px;
+    height: 600px;
+    pointer-events: none;
+
+    &__front {
+        width: 900px;
+        height: 700px;
+        box-sizing: border-box;
+        transform: translate3d(-50px, -50px, 20px);
+
+        background: transparent;
+        border: 50px solid beige;
+    }
+    
+    &__left, &__right, &__top, &__bottom, &__back{   
+        box-sizing: border-box;
+        background: beige;
+    }
+
+    &__left {   
+        width: 400px;
+        height: 700px;
+        transform: translate3d(-250px, -50px, -180px) rotateY(-90deg);
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    &__right {   
+        width: 400px;
+        height: 700px;
+        transform: translate3d(650px, -50px, -180px) rotateY(90deg);
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    
+    &__top {   
+        width: 900px;
+        height: 400px;
+        transform: translate3d(-50px, -250px, -180px) rotateX(90deg);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+    
+    &__bottom {   
+        width: 900px;
+        height: 400px;
+        transform: translate3d(-50px, 450px, -180px) rotateX(-90deg);
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+    
+    &__inner-left {   
+        width: 22px;
+        height: 600px;
+        transform: translate3d(-10px, 0px, 10px) rotateY(90deg);
+        background: #001000;
+    }
+
+    &__inner-right {      
+        width: 22px;
+        height: 600px;
+        transform: translate3d(790px, 0px, 10px) rotateY(-90deg);
+        background: #001000;
+    }
+
+    &__inner-top {       
+        width: 800px;
+        height: 22px;
+        transform: translate3d(0px, -10px, 10px) rotateX(-90deg);
+        background: #001000;
+    }
+
+    &__inner-bottom {   
+        width: 800px;
+        height: 22px;
+        transform: translate3d(0px, 588px, 10px) rotateX(90deg);
+        background: #001000;
+    }
+}

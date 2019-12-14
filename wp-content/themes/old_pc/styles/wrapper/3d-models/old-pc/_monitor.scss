@@ -1,0 +1,54 @@
+.monitor {
+    display: block;
+    width: 800px;
+    height: 600px;
+    background: black;
+    overflow: hidden;
+
+    &__light-filter {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: repeating-linear-gradient(0deg, black 0px, #2bff33 2px, black 4px);
+        overflow: hidden;
+    }
+
+    &__activated-filter {
+        grid-area: monitor;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        border: solid darkblue 2px;
+        box-sizing: border-box;
+
+        filter: blur(1.3px);
+        mix-blend-mode: multiply;
+        background: #000a00;
+
+        color: #00ff0a;
+        font-size: 42px;
+        font-weight: bold;
+
+        flex-flow: column;
+    }
+
+    &__content {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        mix-blend-mode: luminosity;
+       
+        &::-webkit-scrollbar {
+            width: 1em;
+        }
+        &::-webkit-scrollbar-track {
+            background: #111111;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: darkgrey;
+        }
+    }
+}

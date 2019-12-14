@@ -1,35 +1,36 @@
 <?php
 
-/**
- */
 get_header();
+
+
 ?>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main">
+<body <?php body_class(); ?>>
+    <?php
+    try {
+        wp_body_open();
 
-        <?php
-        if (have_posts()) {
+        ob_start();
+        template('page/bare');
+        $content = ob_get_clean();
 
-            // Load posts loop.
-            while (have_posts()) {
-                the_post();
-                get_template_part('template-parts/content/content');
-            }
-
-            // Previous/next page navigation.
-            //twentynineteen_the_posts_navigation();
-        } else {
-
-            // If no content, include the "No posts found" template.
-            get_template_part('template-parts/content/content', 'none');
-        }
-        ?>
-
-    </main><!-- .site-main -->
-</div><!-- .content-area -->
+        ob_start();
+        template('wrapper/old-pc', [
+            'content' => $content,
+            'position' => [0, 0, 400],
+        ]);
+        $old_pc = ob_get_clean();
 
 
-<?php
-get_footer();
-?>
+        template('wrapper/world', [
+            'content' => $old_pc
+        ]);
+
+        wp_footer();
+    } catch (Exception $exception) {
+        print_error_box($exception);
+    }
+    ?>
+</body>
+
+</html>
