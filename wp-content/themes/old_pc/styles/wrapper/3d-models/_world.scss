@@ -8,4 +8,11 @@
     transform-style: preserve-3d;
 
     overflow: hidden;
+    background: peru;
+    filter: blur(0.2px);
+
+}
+
+.world-object {
+    position: absolute;
 }

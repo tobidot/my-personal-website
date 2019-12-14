@@ -1,4 +1,5 @@
 <?php
+
 get_header();
 
 
@@ -16,7 +17,7 @@ get_header();
         ob_start();
         template('wrapper/old-pc', [
             'content' => $content,
-            'position' => [0, 0, 1000],
+            'position' => [0, 0, 400],
         ]);
         $old_pc = ob_get_clean();
 
