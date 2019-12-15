@@ -34,7 +34,7 @@ jobs:
         # Boolean, default `false` if `true` emits comments where CSS was compiled from
         sourceComments: false # optional
         # May be boolean or string, see https://sass-lang.com/documentation/js-api#sourcemap
-        sourceMap: true # optional
+        # sourceMap: true # optional
         # String, does not write but is useful in combination with "sourceMap"
         # outFile: # optional
         # Boolean, when `true` compiled CSS is not linked to source map
