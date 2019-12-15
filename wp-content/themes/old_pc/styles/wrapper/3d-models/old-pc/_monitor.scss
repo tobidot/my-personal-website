@@ -11,6 +11,10 @@
         width: 100%;
         background: repeating-linear-gradient(0deg, black 0px, #2bff33 2px, black 4px);
         overflow: hidden;
+
+        animation-name: flimmer-effect; 
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
     }
 
     &__activated-filter {
@@ -51,4 +55,10 @@
           background-color: darkgrey;
         }
     }
+}
+
+@keyframes flimmer-effect {
+  0% {background-position: 0px 0px ;}
+  50% {background-position: 0px 10px;}
+  100% {background-position: 0px 0px;}
 }
