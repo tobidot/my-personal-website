@@ -5,12 +5,48 @@ on:
     branches:
         - master
 
+
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Sass Build
+      uses: gha-utilities/sass-build@v0.0.5
+      with:
+        # Relative path to SASS or SCSS file, eg. _scss/main.scss
+        source: "wp-content/themes/old_pc/style.scss"
+        # Path compiled CSS should be saved, eg. ~/workspace_sass/assets/css/main.css
+        destination: "wp-content/themes/old_pc/style.css"
+        # Array (Action splits on ":"), of directories to look under for imports and used modules
+        # includePaths: # optional
+        # String, either "expanded", "compressed", "nested", "compact"
+        outputStyle: compressed # optional
+        # Integer and float precision when compiling CSS, eg. `20`
+        # precision: # optional
+        # String, either "space" or "tab", default "space"
+        indentType: space # optional
+        # Integer, of tabs/spaces used to indent, eg. `1`
+        indentWidth: 4 # optional
+        # String, either "lf", "lfcr", "cr", or "crlf", default "lf"
+        # linefeed: # optional
+        # Boolean, default `false` if `true` emits comments where CSS was compiled from
+        sourceComments: false # optional
+        # May be boolean or string, see https://sass-lang.com/documentation/js-api#sourcemap
+        sourceMap: true # optional
+        # String, does not write but is useful in combination with "sourceMap"
+        # outFile: # optional
+        # Boolean, when `true` compiled CSS is not linked to source map
+        # omitSourceMapUrl: # optional
+        # Boolean, when `true` embeds contents of Sass files that contributed to compiled CSS
+        # sourceMapContents: # optional
+        # Boolean, when `true` embeds source map within compiled CSS
+        # sourceMapEmbed:  # optional
+        # String, prepended to all links from from source map to Sass files
+        # sourceMapRoot: # optional
+        # Outputs render_options used for compiling CSS
+        # debug: # optional  
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
@@ -21,3 +57,8 @@ jobs:
         REMOTE_DIR: 'wp-content/themes/old_pc'
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
+     
+
+  
+
+    
