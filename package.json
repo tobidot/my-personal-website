@@ -7,10 +7,7 @@
     "sass": "sass wp-content/themes/old_pc/style.scss wp-content/themes/old_pc/style.css",
     "sass:watch": "sass wp-content/themes/old_pc/style.scss wp-content/themes/old_pc/style.css --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tobidot/old_pc_wordpress_theme.git"
-  },
+  "repository": "git+https://github.com/tobidot/old_pc_wordpress_theme.git",
   "keywords": [
     "wordpress",
     "theme",

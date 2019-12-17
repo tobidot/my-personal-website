@@ -1,0 +1,32 @@
+.archive-grid {
+    display: grid;
+    grid-template-areas:
+    "title title"
+        ". .";
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: auto;
+
+    &__title {
+        grid-area: title;
+        text-align: center;
+    }
+
+    &__element {
+        display: flex;
+        padding: 0.25em;
+        margin: 0.25em;
+
+        color: white;
+        background: #202020;
+        text-decoration: none;
+
+
+        justify-content: center;
+        align-items: flex-start;
+
+        &:hover {
+            border: 0.125em solid white;
+            padding: 0.125em;
+        }
+    }
+}

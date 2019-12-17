@@ -14,8 +14,12 @@
                     let wantedMultiplication = Math.min(screenWidth / modelWidth, screenHeight / modelHeight);
                     first.setAttribute('style', `transform: scale(${wantedMultiplication})`);
                 };
+                let handle = null;
                 window.addEventListener('resize', () => {
-                    resizeWorld();
+                    if (handle === null) handle = setTimeout(() => {
+                        resizeWorld();
+                        handle = null;
+                    }, 333);
                 });
                 resizeWorld();
             }

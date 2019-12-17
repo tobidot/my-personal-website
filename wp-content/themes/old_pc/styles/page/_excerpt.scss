@@ -1,0 +1,20 @@
+.excerpt {
+
+    &__date {
+        font-size: 0.7em;
+    }
+    
+    &__title {
+        text-align: center;
+        margin: 0.25em 0;
+    }
+    
+    &__body {
+        max-height: 8em;
+        border-top: 0.25em solid #A0A0A0;
+        overflow: hidden;
+        p {
+            margin: 0.25em 0;
+        }
+    }
+}
