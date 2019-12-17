@@ -1,7 +1,7 @@
 .archive-grid {
     display: grid;
     grid-template-areas:
-    "title title"
+        "title title"
         ". .";
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: auto;
@@ -13,6 +13,7 @@
 
     &__element {
         display: flex;
+        width: calc(100% - 0.5em);
         padding: 0.25em;
         margin: 0.25em;
 
@@ -28,5 +29,9 @@
             border: 0.125em solid white;
             padding: 0.125em;
         }
+    }
+
+    article {
+        width: 100%;
     }
 }

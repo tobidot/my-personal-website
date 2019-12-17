@@ -3,18 +3,23 @@
     &__date {
         font-size: 0.7em;
     }
-    
+
     &__title {
+        margin: .25em 0;
+        font-size: 50px;
         text-align: center;
-        margin: 0.25em 0;
+        word-break: break-word;
     }
-    
+
     &__body {
         max-height: 8em;
-        border-top: 0.25em solid #A0A0A0;
+        border-top: .25em solid #a0a0a0;
         overflow: hidden;
+
         p {
-            margin: 0.25em 0;
+            margin: .25em 0;
+            white-space: normal;
+            word-break: break-word;
         }
     }
 }
