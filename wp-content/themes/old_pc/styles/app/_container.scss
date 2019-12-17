@@ -1,4 +1,15 @@
 .app-container {
-    white-space: normal;
-    overflow-wrap: break-word;
+  width: 100%;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: calc(600px / 26);
+  letter-spacing: 6.15px;
+  font-size: 25px;
+  margin: auto;
+  font-family: monospace;
+
+  span {
+    display: inline;
+    white-space: pre;
+  }
 }
