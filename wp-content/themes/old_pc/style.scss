@@ -21,8 +21,12 @@ Tags: simple-paged, old-pc, nostalgic
 @import "styles/wrapper/3d-models/world";
 @import "styles/wrapper/3d-models/old-pc/main";
 
+@import "styles/app/container";
+
 @import "styles/page/article";
 @import "styles/page/excerpt.scss";
 @import "styles/page/archive-grid.scss";
+
+@import "styles/helper/fullscreen";
 
 @import "styles/debug/main";

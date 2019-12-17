@@ -75,6 +75,14 @@ if (!function_exists('old_pc_setup')) :
                 'flex-height' => false,
             )
         );
+
+        register_post_type('App', array(
+            'label' => 'App',
+            'public' => true,
+            'supports' => ['title', 'editor', 'exceprt'],
+            'menu_icon' => 'dashicons-media-code',
+            'has_archive' => true,
+        ));
     }
 endif;
 add_action('after_setup_theme', 'old_pc_setup');
