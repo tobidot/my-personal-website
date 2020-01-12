@@ -1,0 +1,12 @@
+Ich hatte bisher noch nicht einmal eine funktionierende neuronal lerndende KI, 
+Ich sollte zuerst eine simplere KI bauen als Agent.
+
+
+##################################
+###      SelfPlaying RPG
+##################################
+
+Folder :
+F:\Dateien\Projects\Programmieren\C++\Instances\SelfPlayingRPG\SelfPlayingRPG
+
+Repository 
