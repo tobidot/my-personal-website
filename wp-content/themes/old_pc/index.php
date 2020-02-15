@@ -15,14 +15,13 @@ get_header();
         $content = ob_get_clean();
 
         ob_start();
-        template('wrapper/old-pc', [
+        template('wrapper/old-pc-monitor', [
             'content' => $content,
             'position' => [0, 0, 400],
         ]);
         $old_pc = ob_get_clean();
 
-
-        template('wrapper/world', [
+        template('wrapper/fullscreen-center', [
             'content' => $old_pc
         ]);
 
