@@ -9,7 +9,7 @@ get_header();
             wp_body_open();
 
             ob_start();
-            template('page/app', []);
+            template('page/bare', []);
             $content = ob_get_clean();
 
             template('wrapper/old-pc-monitor', [
