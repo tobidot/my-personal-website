@@ -1,3 +1,7 @@
+$red: #f22;
+$green: #2f2;
+$blue: #22f;
+
 .monitor {
     display: block;
     width: 800px;
@@ -9,7 +13,7 @@
         display: block;
         height: 100%;
         width: 100%;
-        background: repeating-linear-gradient(0deg, red 0px, #00ff0a 1.25px, #00ff0a 2.75px, blue 4px);
+        background: repeating-linear-gradient(0deg, $red 0px, $green 1.25px, $green 2.75px, $blue 4px);
         overflow: hidden;
 
         animation-name: flimmer-effect;
@@ -27,7 +31,6 @@
 
         filter: blur(1.3px);
         mix-blend-mode: multiply;
-        background: #000a00;
 
         color: #00ff0a;
         font-size: 42px;
@@ -40,6 +43,9 @@
         display: block;
         width: 100%;
         height: 100%;
+
+        background: #000a00;
+
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -55,6 +61,43 @@
 
         &::-webkit-scrollbar-thumb {
             background-color: darkgrey;
+        }
+    }
+
+    &--dynamic-resolution {
+        width: 100%;
+        height: calc(100% - 60px);
+    }
+
+    &--sharp-pixels {
+        .monitor {
+            &__activated-filter {
+                filter: blur(0.5px);
+            }
+        }
+    }
+
+    &--colored {
+        .monitor {
+            &__light-filter {
+                display: block;
+                height: 100%;
+                width: 100%;
+                // background: repeating-linear-gradient(0deg, $red 0px, $red 0.5px, $green 1.5px, $green 2px, blue 3px, blue 3.5px, $red 4px);
+                // background-image: repeating-linear-gradient(0deg, black 0px, black 0.5px, white 1.0px, white 4.5px, black 5px),
+                //     repeating-linear-gradient(90deg, black 0px, #f00 0.125px, #f00 1px, #0f0 2px, #0f0 3px, blue 4px, blue 4.5px, black 4.625px);
+                background-image:
+                    repeating-linear-gradient(0deg, black 0px, black 0px, white 1px, white 9px, black 10px),
+                    repeating-linear-gradient(90deg, $red 0px, $red 1px, $green 1px, $green 2px, $blue 2px, $blue 3px);
+                background-blend-mode: multiply;
+
+                overflow: hidden;
+
+                animation-name: flimmer-effect;
+                animation-duration: 30s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
         }
     }
 }

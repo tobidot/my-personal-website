@@ -36,7 +36,7 @@ function print_error_box(Exception $exception)
     $line = $exception->getLine();
     $message = $exception->getMessage();
     $trace = $exception->getTraceAsString();
-    ?>
+?>
     <div class="debug-report">
         <h2><?= __('An error occured!', 'old_pc') ?></h2>
         <div class="debug-report__code-location code-location">
