@@ -88,6 +88,9 @@ endif;
 add_action('after_setup_theme', 'old_pc_setup');
 
 
+
+
 require_once dirname(__FILE__) . "/scripts.php";
+require_once dirname(__FILE__) . "/dashboard.php";
 require_once dirname(__FILE__) . "/widgets.php";
 require_once dirname(__FILE__) . "/other.php";
