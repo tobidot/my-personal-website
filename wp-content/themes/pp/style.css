@@ -633,10 +633,10 @@ a {
   color: royalblue;
 }
 a:visited {
-  color: purple;
+  color: #7840ff;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #d3a3ff;
 }
 a:focus {
   outline: thin dotted;
@@ -765,7 +765,7 @@ a:hover, a:active {
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 1.5em;
 }
 
 .updated:not(.published) {
@@ -912,9 +912,9 @@ object {
 }
 .archive__item {
   display: flex;
-  background-color: blue;
-  color: #22CC22;
-  border: #22CC22 solid 3px;
+  background-color: #010166;
+  color: #1cff1c;
+  border: #1cff1c solid 3px;
   margin: 5px;
   font-size: 0.8em;
   width: 200px;
@@ -938,10 +938,10 @@ header {
   background: black;
 }
 header h1 a {
-  color: blue;
+  color: #90adff;
 }
 header h1 a:hover, header h1 a:visited {
-  color: blue;
+  color: #90adff;
   text-decoration: none;
 }
 
@@ -969,8 +969,8 @@ header h1 a:hover, header h1 a:visited {
   display: block;
   float: left;
   width: 100%;
-  background: blue;
-  color: #22CC22;
+  background: #010166;
+  color: #1cff1c;
   /* Small menu. */
 }
 .main-navigation .menu {
@@ -1011,19 +1011,19 @@ header h1 a:hover, header h1 a:visited {
   position: relative;
   padding: 5px 10px;
   margin: 5px 10px;
-  border: #1ba01b solid 2px;
-  background: blue;
+  border: #00e800 solid 2px;
+  background: #010166;
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
-  color: #3333ff;
+  color: #c3d3ff;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
-  color: #22CC22;
+  color: #1cff1c;
 }
 .main-navigation a:visited {
-  color: unsaturate(#22CC22, 10%);
+  color: unsaturate(#1cff1c, 10%);
 }
 .main-navigation .menu-toggle {
   display: none;
@@ -1067,7 +1067,7 @@ header h1 a:hover, header h1 a:visited {
   justify-content: space-between;
   font-size: 20px;
   background: black;
-  color: blue;
+  color: #90adff;
 }
 .site-content .home {
   display: block;
