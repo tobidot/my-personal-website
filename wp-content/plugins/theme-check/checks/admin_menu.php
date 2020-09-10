@@ -10,8 +10,8 @@ class AdminMenu implements themecheck {
 //check for levels deprecated in 2.0 in creating menus.
 
 		$checks = array(
-			'/([^_](add_(admin|submenu|menu|dashboard|posts|media|links|pages|comments|theme|plugins|users|management|options)_page)\s?\([^,]*,[^,]*,\s[\'|"]?(level_[0-9]|[0-9])[^;|\r|\r\n]*)/' => __( 'User levels were deprecated in <strong>2.0</strong>. Please see <a href="https://codex.wordpress.org/Roles_and_Capabilities">Roles_and_Capabilities</a>', 'theme-check' ),
-			'/[^a-z0-9](current_user_can\s?\(\s?[\'\"]level_[0-9][\'\"]\s?\))[^\r|\r\n]*/' => __( 'User levels were deprecated in <strong>2.0</strong>. Please see <a href="https://codex.wordpress.org/Roles_and_Capabilities">Roles_and_Capabilities</a>', 'theme-check' )
+			'/([^_](add_(admin|submenu|menu|dashboard|posts|media|links|pages|comments|theme|plugins|users|management|options)_page)\s?\([^,]*,[^,]*,\s[\'|"]?(level_[0-9]|[0-9])[^;|\r|\r\n]*)/' => __( 'User levels were deprecated in <strong>2.0</strong>. Please see <a href="https://wordpress.org/support/article/roles-and-capabilities/">Roles_and_Capabilities</a>', 'theme-check' ),
+			'/[^a-z0-9](current_user_can\s?\(\s?[\'\"]level_[0-9][\'\"]\s?\))[^\r|\r\n]*/' => __( 'User levels were deprecated in <strong>2.0</strong>. Please see <a href="https://wordpress.org/support/article/roles-and-capabilities/">Roles_and_Capabilities</a>', 'theme-check' )
 			);
 
 		foreach ( $php_files as $php_key => $phpfile ) {
@@ -31,7 +31,11 @@ class AdminMenu implements themecheck {
 // Note to TGMPA: Stop trying to bypass theme check. 
 
 		$checks = array(
-			'/(?<!function)[^_>:](add_[^_\'",();]+?_page)/' => __( 'Themes should use <strong>add_theme_page()</strong> for adding admin pages.', 'theme-check' )
+			'/(?<!function)[^_>:](add_[^_\'",();]+?_page)/' => _x( 
+					'Themes must not use <strong>%s()</strong>.',
+					'function name',
+					'theme-check' 
+				)
 			);
 
 
@@ -40,13 +44,20 @@ class AdminMenu implements themecheck {
 				checkcount();
 				if ( preg_match_all( $key, $phpfile, $matches ) ) {
 					foreach ($matches[1] as $match) {
-						if ($match == 'add_theme_page') {
+						if ( in_array( $match, array( 'add_theme_page', 'add_menu_page', 'add_submenu_page' ), true ) ) {
 							continue;
 						}
 						$filename = tc_filename( $php_key );
 						$error = ltrim( rtrim( $match, '(' ) );
 						$grep = tc_grep( $error, $php_key );
-						$this->error[] = sprintf('<span class="tc-lead tc-required">'.__( 'REQUIRED', 'theme-check' ) .'</span>: <strong>%1$s</strong>. %2$s%3$s', $filename, $check, $grep);
+						$notallowed = sprintf( $check, $match );
+
+						$this->error[] = sprintf( 
+							'<span class="tc-lead tc-required">'.__( 'REQUIRED', 'theme-check' ) .'</span>: <strong>%1$s</strong>. %2$s%3$s%', 
+							$filename,
+							$notallowed,
+							$grep
+						);
 						$ret = false;
 					}
 				}
