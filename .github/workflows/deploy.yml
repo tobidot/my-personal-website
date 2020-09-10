@@ -16,9 +16,9 @@ jobs:
       uses: gha-utilities/sass-build@v0.0.5
       with:
         # Relative path to SASS or SCSS file, eg. _scss/main.scss
-        source: "wp-content/themes/old_pc/style.scss"
+        source: "wp-content/themes/pp/style.scss"
         # Path compiled CSS should be saved, eg. ~/workspace_sass/assets/css/main.css
-        destination: "wp-content/themes/old_pc/style.css"
+        destination: "wp-content/themes/pp/style.css"
         # Array (Action splits on ":"), of directories to look under for imports and used modules
         # includePaths: # optional
         # String, either "expanded", "compressed", "nested", "compact"
@@ -53,8 +53,8 @@ jobs:
         FTP_SERVER: ftp.strato.com
         FTP_USERNAME: ftp_wp-t@gepp-im-web.de
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: 'wp-content/themes/old_pc'
-        REMOTE_DIR: 'wp-content/themes/old_pc'
+        LOCAL_DIR: 'wp-content/themes/pp'
+        REMOTE_DIR: 'wp-content/themes/pp'
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
      
