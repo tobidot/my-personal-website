@@ -16,6 +16,7 @@ services:
 #      XDEBUG_CONFIG: remote_host=host.docker.internal
     volumes:
       - ./wp-content:/var/www/html/wp-content/
+      - ./wp-config.php:/var/www/html/wp-config.php
 
   db:
     image: mysql:5.7
