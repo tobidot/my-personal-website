@@ -1,16 +1,24 @@
 .site-content {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     font-size: 20px;
     background: $primary-bg-color;
     color: $primary-fg-color;
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
     .home {
         display: block;
-        padding: 20px 200px 20px 200px;
+        width: 100%;
+        max-width: 800px;
+        padding: 20px 20px 20px 20px;
+        margin: auto;
         section {
             p {
-                margin-left : 20px;
+                margin-left: 20px;
                 font-size: 0.9em;
                 &:nth-child(2n) {
                     background-color: lighten($color: $primary-bg-color, $amount: 30);
@@ -18,8 +26,20 @@
             }
         }
     }
-    &:before, &:after {
+    #primary {
+        width: calc(100% - 320px);
+    }
+    #secondary {
+        width: 320px;
+    }
+    &:before,
+    &:after {
         content: none;
     }
+    @media (max-width: 1023px) {
+        #primary,
+        #secondary {
+            width: 100%;
+        }
+    }
 }
-

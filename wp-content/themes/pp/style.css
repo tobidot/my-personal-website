@@ -912,15 +912,17 @@ object {
 }
 .archive__item {
   display: flex;
-  background-color: #010166;
-  color: #1cff1c;
-  border: #1cff1c solid 3px;
-  margin: 5px;
-  font-size: 0.8em;
   width: 200px;
   height: 100px;
-  overflow: hidden;
+  border: #1cff1c solid 3px;
+  margin: 5px;
+  color: #1cff1c;
+  background-color: #010166;
+  font-size: 0.8em;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .archive__item__title {
   margin: auto 0;
@@ -960,10 +962,10 @@ header h1 a:hover, header h1 a:visited {
 }
 
 /**
- * #######################################################
- *                  Navigation
- * #######################################################
- **/
+  * #######################################################
+  *                  Navigation
+  * #######################################################
+  **/
 .main-navigation {
   clear: both;
   display: block;
@@ -1041,11 +1043,35 @@ header h1 a:hover, header h1 a:visited {
     display: block;
   }
 }
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  background: #292929;
+}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.comment-navigation .nav-next,
+.posts-navigation .nav-previous,
+.posts-navigation .nav-next,
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment-navigation .nav-previous > a,
+.comment-navigation .nav-next > a,
+.posts-navigation .nav-previous > a,
+.posts-navigation .nav-next > a,
+.post-navigation .nav-previous > a,
+.post-navigation .nav-next > a {
+  color: #1cff1c;
+  font-size: 0.8em;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -1063,15 +1089,23 @@ header h1 a:hover, header h1 a:visited {
 
 .site-content {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   font-size: 20px;
   background: black;
   color: #90adff;
 }
+.site-content h1,
+.site-content h2,
+.site-content h3 {
+  text-align: center;
+}
 .site-content .home {
   display: block;
-  padding: 20px 200px 20px 200px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px 20px 20px 20px;
+  margin: auto;
 }
 .site-content .home section p {
   margin-left: 20px;
@@ -1080,8 +1114,57 @@ header h1 a:hover, header h1 a:visited {
 .site-content .home section p:nth-child(2n) {
   background-color: #4d4d4d;
 }
+.site-content #primary {
+  width: calc(100% - 320px);
+}
+.site-content #secondary {
+  width: 320px;
+}
 .site-content:before, .site-content:after {
   content: none;
+}
+@media (max-width: 1023px) {
+  .site-content #primary,
+.site-content #secondary {
+    width: 100%;
+  }
+}
+
+aside {
+  padding: 5px;
+}
+@media (min-width: 1024px) {
+  aside {
+    border-left: ridge 10px #ffffff;
+  }
+}
+@media (max-width: 1023px) {
+  aside {
+    border-top: ridge 10px #ffffff;
+  }
+}
+
+.widget_recent_entries > ul {
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.widget_recent_entries > ul > li {
+  display: flex;
+  width: 100%;
+  border: #1cff1c solid 3px;
+  margin: 5px;
+  color: #1cff1c;
+  background-color: #010166;
+  font-size: 0.8em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.widget_recent_entries > ul > li > a {
+  color: #1cff1c;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+.widget_recent_entries {
+    > ul {
+        padding: 5px;
+        margin: 0;
+
+        list-style: none;
+
+        text-align: center;
+        > li {
+            display: flex;
+            width: 100%;
+            border: $secondary-fg-color solid 3px;
+            margin: 5px;
+
+            color: $secondary-fg-color;
+            background-color: $secondary-bg-color;
+            font-size: 0.8em;
+
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            > a {
+                color: $secondary-fg-color;
+            }
+        }
+    }
+}
