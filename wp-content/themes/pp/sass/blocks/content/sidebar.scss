@@ -1,0 +1,9 @@
+aside {
+    padding: 5px;
+    @media (min-width: 1024px) {
+        border-left: ridge 10px #ffffff;
+    }
+    @media (max-width: 1023px) {
+        border-top: ridge 10px #ffffff;
+    }
+}
