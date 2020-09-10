@@ -12,7 +12,7 @@
     }
     .home {
         display: block;
-        width: calc(100% - 320px);
+        width: 100%;
         max-width: 800px;
         padding: 20px 20px 20px 20px;
         margin: auto;
@@ -26,7 +26,10 @@
             }
         }
     }
-    aside {
+    #primary {
+        width: calc(100% - 320px);
+    }
+    #secondary {
         width: 320px;
     }
     &:before,
@@ -34,10 +37,8 @@
         content: none;
     }
     @media (max-width: 1023px) {
-        .home {
-            width: 100%;
-        }
-        aside {
+        #primary,
+        #secondary {
             width: 100%;
         }
     }

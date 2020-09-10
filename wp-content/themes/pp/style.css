@@ -962,10 +962,10 @@ header h1 a:hover, header h1 a:visited {
 }
 
 /**
- * #######################################################
- *                  Navigation
- * #######################################################
- **/
+  * #######################################################
+  *                  Navigation
+  * #######################################################
+  **/
 .main-navigation {
   clear: both;
   display: block;
@@ -1043,11 +1043,35 @@ header h1 a:hover, header h1 a:visited {
     display: block;
   }
 }
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  background: #292929;
+}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.comment-navigation .nav-next,
+.posts-navigation .nav-previous,
+.posts-navigation .nav-next,
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment-navigation .nav-previous > a,
+.comment-navigation .nav-next > a,
+.posts-navigation .nav-previous > a,
+.posts-navigation .nav-next > a,
+.post-navigation .nav-previous > a,
+.post-navigation .nav-next > a {
+  color: #1cff1c;
+  font-size: 0.8em;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -1078,7 +1102,7 @@ header h1 a:hover, header h1 a:visited {
 }
 .site-content .home {
   display: block;
-  width: calc(100% - 320px);
+  width: 100%;
   max-width: 800px;
   padding: 20px 20px 20px 20px;
   margin: auto;
@@ -1090,17 +1114,18 @@ header h1 a:hover, header h1 a:visited {
 .site-content .home section p:nth-child(2n) {
   background-color: #4d4d4d;
 }
-.site-content aside {
+.site-content #primary {
+  width: calc(100% - 320px);
+}
+.site-content #secondary {
   width: 320px;
 }
 .site-content:before, .site-content:after {
   content: none;
 }
 @media (max-width: 1023px) {
-  .site-content .home {
-    width: 100%;
-  }
-  .site-content aside {
+  .site-content #primary,
+.site-content #secondary {
     width: 100%;
   }
 }
