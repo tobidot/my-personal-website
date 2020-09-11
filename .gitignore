@@ -1,2 +1,6 @@
 /wp-content/themes/old_pc/**/*.css
 /wp-content/themes/old_pc/**/*.css.map
+/wp-content/themes/pp/**/*.css
+/wp-content/themes/pp/**/*.css.map
+/wp-content/uploads
+/wp-content/projects

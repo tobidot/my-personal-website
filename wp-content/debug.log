@@ -1,0 +1,40 @@
+[11-Sep-2020 09:27:54 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'available_js_projects_render' not found or invalid function name in /var/www/html/wp-admin/includes/template.php on line 1389
+[11-Sep-2020 10:02:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:3) in /var/www/html/wp-includes/pluggable.php on line 1296
+[11-Sep-2020 10:02:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:3) in /var/www/html/wp-includes/pluggable.php on line 1299
+[11-Sep-2020 10:43:07 UTC] PHP Notice:  Array to string conversion in /var/www/html/wp-content/themes/pp/page-projects.php on line 30
+[11-Sep-2020 10:44:12 UTC] PHP Notice:  Array to string conversion in /var/www/html/wp-content/themes/pp/page-projects.php on line 31
+[11-Sep-2020 10:49:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function unzip_file() in /var/www/html/wp-content/themes/pp/page-projects.php:35
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/pp/page-projects.php on line 35
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  Use of undefined constant FS_CHMOD_DIR - assumed 'FS_CHMOD_DIR' (this will throw an Error in a future version of PHP) in /var/www/html/wp-admin/includes/file.php on line 1571
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_mkdir() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 560
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:45:46 UTC] PHP Warning:  ftp_pwd() expects parameter 1 to be resource, null given in /var/www/html/wp-admin/includes/class-wp-filesystem-ftpext.php on line 230
+[11-Sep-2020 11:48:51 UTC] PHP Notice:  Undefined variable: project_project_file_path in /var/www/html/wp-content/themes/pp/page-projects.php on line 39
+[11-Sep-2020 11:48:51 UTC] PHP Notice:  Undefined variable: project_page_file_path in /var/www/html/wp-content/themes/pp/page-projects.php on line 42
+[11-Sep-2020 11:48:51 UTC] PHP Notice:  Undefined variable: project_project_file_path in /var/www/html/wp-content/themes/pp/page-projects.php on line 52
+[11-Sep-2020 11:49:13 UTC] PHP Notice:  Undefined variable: project_page_file_path in /var/www/html/wp-content/themes/pp/page-projects.php on line 42
+[11-Sep-2020 11:49:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:42) in /var/www/html/wp-includes/pluggable.php on line 1296
+[11-Sep-2020 11:49:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:42) in /var/www/html/wp-includes/pluggable.php on line 1299
+[11-Sep-2020 11:50:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:50) in /var/www/html/wp-includes/pluggable.php on line 1296
+[11-Sep-2020 11:50:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:50) in /var/www/html/wp-includes/pluggable.php on line 1299
+[11-Sep-2020 11:51:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:50) in /var/www/html/wp-includes/pluggable.php on line 1296
+[11-Sep-2020 11:51:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/themes/pp/page-projects.php:50) in /var/www/html/wp-includes/pluggable.php on line 1299
+[11-Sep-2020 12:00:47 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'available_js_projects_render' not found or invalid function name in /var/www/html/wp-admin/includes/template.php on line 1389
+[11-Sep-2020 12:06:01 UTC] PHP Warning:  array_map() expects parameter 1 to be a valid callback, function 'available_js_projects_render__list_item' not found or invalid function name in /var/www/html/wp-content/themes/pp/functions/widgets/available-js-projects.php on line 15
+[11-Sep-2020 12:06:01 UTC] PHP Warning:  implode(): Invalid arguments passed in /var/www/html/wp-content/themes/pp/functions/widgets/available-js-projects.php on line 15
+[11-Sep-2020 12:29:12 UTC] PHP Parse error:  syntax error, unexpected 'wp_enqueue_style' (T_STRING) in /var/www/html/wp-content/themes/pp/functions.php on line 130
