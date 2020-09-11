@@ -44,7 +44,7 @@ function pp_show_available_js_projects_in_dashboard()
 	wp_add_dashboard_widget(
 		'available-js-projects',
 		esc_html__('Available JS Projects', 'pp'),
-		'available_js_projects_render'
+		'print_available_js_projects'
 	);
 }
 add_action('wp_dashboard_setup', 'pp_show_available_js_projects_in_dashboard');
