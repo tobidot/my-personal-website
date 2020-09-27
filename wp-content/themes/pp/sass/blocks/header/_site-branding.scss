@@ -3,8 +3,9 @@
  *                  Site-Branding
  * #######################################################
  **/
+@import "../../general/variables.scss";
 
- .site-branding {
+.site-branding {
     text-align: center;
     background: darken($primary-bg-color, 10%);
 
@@ -12,4 +13,4 @@
         background: $info-bg-color;
         color: $info-fg-color;
     }
- }
+}

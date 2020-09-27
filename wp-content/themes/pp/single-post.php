@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area template-single-post">
     <main id="main" class="site-main">
 
         <?php
