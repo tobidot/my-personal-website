@@ -1,0 +1,17 @@
+@import "../general/variables";
+
+body {
+    background-color: $primary-bg-color;
+}
+
+.site {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto minmax(50vh, 1fr) 100px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    margin: 28px 0;
+}

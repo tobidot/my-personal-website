@@ -10,17 +10,15 @@ while (have_posts()) :
 endwhile;
 ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area template-home">
     <main id="main" class="site-main">
-        <div class="home">
-            <section class="home__introduction">
-                <h1>Willkommen auf meiner Website</h1>
-                Hier präsentiere ich in kürze Projekte oder nützliche Codesnippets
-            </section>
-            <section class="home__archive">
-                <?php print_archive($archive_posts) ?>
-            </section>
-        </div>
+        <section class="template-home__introduction">
+            <h1>Willkommen auf meiner Website</h1>
+            Hier präsentiere ich in kürze Projekte oder nützliche Codesnippets
+        </section>
+        <section class="template-home__archive">
+            <?php print_archive($archive_posts) ?>
+        </section>
     </main>
 </div>
 
