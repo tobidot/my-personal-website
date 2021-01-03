@@ -4,8 +4,8 @@
   "description": "Eine Wordpress Seite im stil von alten Röhren Monitoren",
   "main": "index.js",
   "scripts": {
-    "sass": "sass wp-content/themes/old_pc/style.scss wp-content/themes/old_pc/style.css",
-    "sass:watch": "sass wp-content/themes/old_pc/style.scss wp-content/themes/old_pc/style.css --watch"
+    "sass": "sass wp-content/themes/pp/style.scss wp-content/themes/pp/style.css",
+    "sass:watch": "sass wp-content/themes/pp/style.scss wp-content/themes/pp/style.css --watch"
   },
   "repository": "git+https://github.com/tobidot/old_pc_wordpress_theme.git",
   "keywords": [

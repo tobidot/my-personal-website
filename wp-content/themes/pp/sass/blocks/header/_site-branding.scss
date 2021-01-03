@@ -7,7 +7,7 @@
 
 .site-branding {
     text-align: center;
-    background: darken($primary-bg-color, 10%);
+    background: $primary-bg-color;
 
     .site-description {
         background: $info-bg-color;
