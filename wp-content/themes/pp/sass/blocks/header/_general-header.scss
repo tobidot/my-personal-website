@@ -5,13 +5,14 @@
  **/
 
 header {
-    background: darken($primary-bg-color, 20%);
+    background: $primary-bg-color;
 
     h1 a {
-        color : lighten($primary-fg-color, 0%);
+        color: $primary-fg-color;
 
-        &:hover, &:visited {
-            color : lighten($primary-fg-color, 0%);
+        &:hover,
+        &:visited {
+            color: $primary-fg-color;
             text-decoration: none;
         }
     }

@@ -9,8 +9,9 @@
 	display: block;
 	float: left;
 	width: 100%;
-	background: $secondary-bg-color;
+	border-bottom: 5px solid $info-fg-color;
 	color: $secondary-fg-color;
+	background: linear-gradient(0deg, $secondary-bg-color, $secondary-bg-color, $primary-bg-color);
 
 	.menu {
 		margin-left: 25%;
@@ -38,6 +39,7 @@
 			}
 
 			li {
+				user-select: none;
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -47,19 +49,26 @@
 			a {
 				width: 200px;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		.sub-menu {
+			height: auto;
+			border: 6px ridge $info-fg-color;
+			background: $primary-bg-color;
+			opacity: 0.1;
+			transition: opacity 0.5s ease-out;
+		}
+
+		li {
+			&:hover,
+			&.focus {
+				ul {
+					left: -0.75em;
+				}
+				.sub-menu {
+					opacity: 1;
+				}
+			}
 		}
 	}
 
@@ -87,14 +96,8 @@
 		}
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-
 	.menu-toggle {
-		display: none;
+		width: 100px;
 	}
 
 	/* Small menu. */
@@ -103,19 +106,48 @@
 	}
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (max-width: 1023px) {
+	.main-navigation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.main-navigation.toggled {
+		ul {
+			display: block;
+		}
+		li {
+			&:not(:hover):not(.focus) {
+				.sub-menu {
+					left: -40px;
+					top: 0;
+					width: 30px;
+					height: 100%;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
+	.main-navigation {
+		ul {
+			display: block;
+		}
 	}
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+	position: relative;
 	background: $info-bg-color;
+	border-radius: 10px;
 
 	.site-main & {
 		margin: 0 0 1.5em;
@@ -128,19 +160,40 @@
 		justify-content: center;
 		align-items: center;
 		> a {
+			display: inline-block;
+			padding: 0 1em;
+			white-space: nowrap;
 			color: $secondary-fg-color;
 			font-size: 0.8em;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 	}
 
 	.nav-previous {
 		float: left;
+		border-right: 1px solid $info-fg-color;
+		background: repeating-linear-gradient(-45deg, $info-bg-color 0px, $primary-bg-color calc(10% + 10px));
 		width: 50%;
 	}
 
 	.nav-next {
 		float: right;
+		border-left: 1px solid $info-fg-color;
+		background: repeating-linear-gradient(45deg, $info-bg-color 0px, $primary-bg-color calc(10% + 10px));
 		text-align: right;
 		width: 50%;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		display: block;
+		width: 0.5em;
+		height: 0.5em;
+		background: $info-fg-color;
+		transform: translate(-50%, -50%) scale(2, 1) rotate(45deg);
 	}
 }
