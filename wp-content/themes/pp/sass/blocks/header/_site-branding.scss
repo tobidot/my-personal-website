@@ -9,8 +9,27 @@
     text-align: center;
     background: $primary-bg-color;
 
+    .site-title {
+        font-size: 42px;
+        font-family: "Courier New", Courier, monospace;
+        margin: 0.75em 0 0.5em;
+        > a {
+            text-decoration: none;
+            color: $primary-fg-color;
+            font-weight: bold;
+            &:visited,
+            &:hover,
+            &:active {
+                color: $primary-fg-color;
+            }
+        }
+    }
+
     .site-description {
-        background: $info-bg-color;
+        font-size: 18px;
+        padding: 0.33em 0;
+        margin: 0.75em 0 0.5em;
+        background: linear-gradient($primary-bg-color, $info-bg-color, $primary-bg-color);
         color: $info-fg-color;
     }
 }

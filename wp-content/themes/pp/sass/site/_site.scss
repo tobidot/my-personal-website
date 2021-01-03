@@ -2,14 +2,20 @@
 
 body {
     background-color: $primary-bg-color;
+    color: $primary-fg-color;
+    font-family: cursive;
 }
 
 .site {
     height: 100%;
     width: 100%;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto minmax(50vh, 1fr) 100px;
     box-sizing: border-box;
+    .admin-bar & {
+        min-height: calc(100vh - 32px);
+    }
 }
 
 .content-area {
