@@ -27,13 +27,13 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USER }} 
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        log-level: verbose
-        port: 22
-        security: loose
+        #log-level: verbose
+        #port: 22
+        #security: loose
+        args: --delete
       env:
         LOCAL_DIR: 'wp-content/themes/pp'
         REMOTE_DIR: 'wp-content/themes/pp'
-        ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
      
 
