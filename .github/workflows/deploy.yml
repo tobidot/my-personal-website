@@ -48,13 +48,14 @@ jobs:
         # Outputs render_options used for compiling CSS
         # debug: # optional  
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       env:
-        FTP_SERVER: ssh.strato.com
-        FTP_USERNAME: ftp_wp-t@gepp-im-web.de
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USER }} 
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: 'wp-content/themes/pp'
         REMOTE_DIR: 'wp-content/themes/pp'
+        LOG-LEVEL: verbose
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
      
