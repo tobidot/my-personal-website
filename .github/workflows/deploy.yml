@@ -22,7 +22,7 @@ jobs:
         indentWidth: 4
         sourceComments: false
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USER }} 
