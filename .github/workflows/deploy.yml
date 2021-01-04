@@ -50,9 +50,9 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       env:
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        FTP_USERNAME: ${{ secrets.FTP_USER }} 
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        SERVER: ${{ secrets.FTP_SERVER }}
+        USERNAME: ${{ secrets.FTP_USER }} 
+        PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: 'wp-content/themes/pp'
         REMOTE_DIR: 'wp-content/themes/pp'
         LOG-LEVEL: verbose
