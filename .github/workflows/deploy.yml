@@ -50,11 +50,11 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-        FTP_SERVER: ftp.strato.com
+        FTP_SERVER: ssh.strato.com
         FTP_USERNAME: ftp_wp-t@gepp-im-web.de
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: 'wp-content/themes/old_pc'
-        REMOTE_DIR: 'wp-content/themes/old_pc'
+        LOCAL_DIR: 'wp-content/themes/pp'
+        REMOTE_DIR: 'wp-content/themes/pp'
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
      
