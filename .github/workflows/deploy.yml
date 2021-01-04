@@ -31,6 +31,8 @@ jobs:
         #port: 22
         #security: loose
         args: --delete
+        local-dir: 'wp-content/themes/pp'
+        git-ftp-args: --insecure --remote-root 'wp-content/themes/pp'  
       env:
         LOCAL_DIR: 'wp-content/themes/pp'
         REMOTE_DIR: 'wp-content/themes/pp'
