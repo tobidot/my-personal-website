@@ -16,9 +16,9 @@ jobs:
       uses: gha-utilities/sass-build@v0.0.5
       with:
         # Relative path to SASS or SCSS file, eg. _scss/main.scss
-        source: "wp-content/themes/old_pc/style.scss"
+        source: "wp-content/themes/pp/style.scss"
         # Path compiled CSS should be saved, eg. ~/workspace_sass/assets/css/main.css
-        destination: "wp-content/themes/old_pc/style.css"
+        destination: "wp-content/themes/pp/style.css"
         # Array (Action splits on ":"), of directories to look under for imports and used modules
         # includePaths: # optional
         # String, either "expanded", "compressed", "nested", "compact"
