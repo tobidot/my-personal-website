@@ -1,0 +1,24 @@
+.comment {
+    &-body {
+        border-radius: 0 10px 10px 10px;
+        margin: 1em;
+        box-shadow: 0 0 5px $primary-fg-color;
+    }
+    &-meta {
+        display: flex;
+        min-height: 64px;
+        border-radius: 10px;
+        font-size: 14px;
+        justify-content: space-between;
+    }
+    &-author {
+        align-self: baseline;
+        .avatar {
+            margin: 1px;
+        }
+        .fn,
+        .says {
+            vertical-align: top;
+        }
+    }
+}

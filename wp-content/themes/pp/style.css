@@ -1190,9 +1190,6 @@ header h1 a:hover, header h1 a:visited {
   margin-left: 20px;
   font-size: 0.9em;
 }
-.site-content #primary section p:nth-child(2n) {
-  background-color: #5e5e5e;
-}
 .site-content #secondary {
   width: 320px;
 }
@@ -1249,6 +1246,12 @@ aside {
   color: #44dd99;
 }
 
+.wp-block-code {
+  background: #32373c;
+  color: #90adff;
+  box-shadow: 1px 1px 6px 2px;
+}
+
 /**
  * #######################################################
  *                  Variables
@@ -1259,6 +1262,107 @@ footer {
   background-color: #303030;
   justify-content: center;
   align-items: center;
+}
+
+.comment-form {
+  display: grid;
+  grid-template-areas: "info info" "comment comment" "name email" "website ." "remember remember" "cookie cookie" "submit submit";
+  gap: 5px;
+}
+.comment-form p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comment-form p > label {
+  flex: 0 0 auto;
+  padding: 0.5em;
+  white-space: nowrap;
+}
+.comment-form input {
+  flex: 1 1 100%;
+}
+.comment-form-comment {
+  grid-area: comment;
+}
+.comment-form-comment.comment-form-comment {
+  flex-direction: column;
+}
+.comment-form-author {
+  grid-area: name;
+}
+.comment-form-email {
+  grid-area: email;
+}
+.comment-form-url {
+  grid-area: website;
+}
+.comment-form-cookies-consent {
+  grid-area: cookie;
+  padding: 0.5em;
+  background-color: #303030;
+  border-radius: 10px;
+}
+.comment-form-cookies-consent.comment-form-cookies-consent {
+  flex-direction: row;
+}
+.comment-form-cookies-consent.comment-form-cookies-consent > label {
+  flex: 1 1 auto;
+  white-space: normal;
+}
+.comment-form-cookies-consent > input {
+  flex: 0 0 10px;
+}
+.comment-form-condition-consent {
+  grid-area: condition;
+}
+.comment-form-condition-consent > label {
+  white-space: normal;
+}
+.comment-form .form-submit {
+  grid-area: submit;
+}
+.comment-form .form-submit > input {
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #90adff;
+  background: #303030;
+  box-shadow: 0px 0px 5px #90adff;
+  transition: box-shadow 0.5s ease-in;
+}
+.comment-form .form-submit > input:hover {
+  box-shadow: 0px 0px 5px 3px #90adff;
+}
+.comment-notes.comment-notes {
+  display: block;
+  grid-area: info;
+}
+
+.comment-body {
+  border-radius: 0 10px 10px 10px;
+  margin: 1em;
+  box-shadow: 0 0 5px #90adff;
+}
+.comment-meta {
+  display: flex;
+  min-height: 64px;
+  border-radius: 10px;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.comment-author {
+  align-self: baseline;
+}
+.comment-author .avatar {
+  margin: 1px;
+}
+.comment-author .fn,
+.comment-author .says {
+  vertical-align: top;
 }
 
 /**
