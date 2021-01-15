@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.9'
 
 services:
 
@@ -15,8 +15,8 @@ services:
       WORDPRESS_DB_NAME: wordpress
 #      XDEBUG_CONFIG: remote_host=host.docker.internal
     volumes:
-      - ./wp-config.php:/var/www/html/wp-config.php
-      - ./wp-content:/var/www/html/wp-content/
+      - "./wp-content:/var/www/html/wp-content/"
+      # - "./.docker/local:/tmp/docker"
 
   db:
     image: mysql:5.7
@@ -30,5 +30,5 @@ services:
       - db:/var/lib/mysql
 
 volumes:
-  wordpress:
+  wordpress: 
   db:
