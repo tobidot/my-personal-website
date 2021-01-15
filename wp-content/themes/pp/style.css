@@ -1269,6 +1269,11 @@ footer {
   grid-template-areas: "info info" "comment comment" "name email" "website ." "remember remember" "cookie cookie" "submit submit";
   gap: 5px;
 }
+.comment-form .logged-in-as {
+  flex-direction: row;
+  justify-content: space-around;
+  grid-column: 1/-1;
+}
 .comment-form p {
   display: flex;
   flex-direction: column;

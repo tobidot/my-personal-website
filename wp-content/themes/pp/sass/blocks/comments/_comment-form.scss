@@ -1,6 +1,5 @@
 .comment {
-    &-respond {
-    }
+    &-respond {}
 
     &-form {
         display: grid;
@@ -15,67 +14,86 @@
         gap: 5px;
 
         .logged-in-as {
+            flex-direction: row;
+            justify-content: space-around;
+            grid-column: 1/-1;
         }
-        .comment-form-comment {
-        }
-        .form-submit {
-        }
+
+        .comment-form-comment {}
+
+        .form-submit {}
     }
+
     &-form {
         p {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            > label {
+
+            >label {
                 flex: 0 0 auto;
                 padding: 0.5em;
                 white-space: nowrap;
             }
         }
+
         input {
             flex: 1 1 100%;
         }
+
         &-comment {
             grid-area: comment;
+
             &.comment-form-comment {
                 flex-direction: column;
             }
         }
+
         &-author {
             grid-area: name;
         }
+
         &-email {
             grid-area: email;
         }
+
         &-url {
             grid-area: website;
         }
+
         &-cookies-consent {
             grid-area: cookie;
             padding: 0.5em;
             background-color: $info-bg-color;
             border-radius: 10px;
+
             &.comment-form-cookies-consent {
                 flex-direction: row;
             }
-            &.comment-form-cookies-consent > label {
+
+            &.comment-form-cookies-consent>label {
                 flex: 1 1 auto;
                 white-space: normal;
             }
-            > input {
+
+            >input {
                 flex: 0 0 10px;
             }
         }
+
         &-condition-consent {
             grid-area: condition;
-            > label {
+
+            >label {
                 white-space: normal;
             }
         }
+
         .form-submit {
             grid-area: submit;
-            > input {
+
+            >input {
                 border-radius: 10px;
                 cursor: pointer;
                 font: inherit;
@@ -85,12 +103,14 @@
                 background: $info-bg-color;
                 box-shadow: 0px 0px 5px $primary-fg-color;
                 transition: box-shadow 0.5s ease-in;
+
                 &:hover {
                     box-shadow: 0px 0px 5px 3px $primary-fg-color;
                 }
             }
         }
     }
+
     &-notes {
         &.comment-notes {
             display: block;
